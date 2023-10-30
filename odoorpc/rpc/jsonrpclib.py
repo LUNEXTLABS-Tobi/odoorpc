@@ -96,7 +96,7 @@ class ProxyJSON(Proxy):
     """
 
     def __init__(
-        self, host, port, timeout=120, ssl=False, opener=None, deserialize=True, basic_auth=basic_auth,
+        self, host, port, timeout=120, ssl=False, opener=None, deserialize=True, basic_auth=None,
     ):
         Proxy.__init__(self, host, port, timeout, ssl, opener, basic_auth=basic_auth)
         self._deserialize = deserialize
