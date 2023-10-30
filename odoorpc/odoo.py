@@ -97,7 +97,7 @@ class ODOO(object):
         # Instanciate the server connector
         try:
             self._connector = rpc.PROTOCOLS[protocol](
-                self._host, self._port, self._basic_auth, timeout, version, opener=opener
+                self._host, self._port, timeout, version, opener=opener, basic_auth=self._basic_auth, 
             )
         except rpc.error.ConnectorError as exc:
             raise error.InternalError(exc.message)
